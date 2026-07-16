@@ -3,8 +3,19 @@ import { motion, useInView, useMotionValue, useTransform, animate } from "framer
 import { useEffect, useRef, useState } from "react";
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 import {
-  Pause, Play, ArrowRight, Star, Shield, Sparkles as SparkleIcon,
-  Clock, DollarSign, Leaf, Phone, MessageCircle, Mail, CheckCircle2,
+  Pause,
+  Play,
+  ArrowRight,
+  Star,
+  Shield,
+  Sparkles as SparkleIcon,
+  Clock,
+  DollarSign,
+  Leaf,
+  Phone,
+  MessageCircle,
+  Mail,
+  CheckCircle2,
 } from "lucide-react";
 import { PageShell, Sparkles } from "@/components/layout/Chrome";
 import { SITE, SERVICES, whatsappUrl } from "@/lib/site";
@@ -25,15 +36,23 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Asmato Cleaning & Fumigation — Ogbomoso, Nigeria" },
-      { name: "description", content: "Ogbomoso's most trusted cleaning and fumigation team. Commercial, industrial, window, upholstery, domestic cleaning and licensed fumigation." },
+      {
+        name: "description",
+        content:
+          "Ogbomoso's most trusted cleaning and fumigation team. Commercial, industrial, window, upholstery, domestic cleaning and licensed fumigation.",
+      },
     ],
   }),
   component: Home,
 });
 
 const IMG: Record<string, string> = {
-  commercial: commercialImg, industrial: industrialImg, window: windowImg,
-  upholstery: upholsteryImg, domestic: domesticImg, fumigation: fumigationImg,
+  commercial: commercialImg,
+  industrial: industrialImg,
+  window: windowImg,
+  upholstery: upholsteryImg,
+  domestic: domesticImg,
+  fumigation: fumigationImg,
 };
 
 function Home() {
@@ -61,7 +80,13 @@ function Hero() {
   const toggle = () => {
     const v = videoRef.current;
     if (!v) return;
-    if (v.paused) { v.play(); setPlaying(true); } else { v.pause(); setPlaying(false); }
+    if (v.paused) {
+      v.play();
+      setPlaying(true);
+    } else {
+      v.pause();
+      setPlaying(false);
+    }
   };
 
   return (
@@ -71,10 +96,16 @@ function Hero() {
         <video
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay muted loop playsInline
+          autoPlay
+          muted
+          loop
+          playsInline
           poster={heroImg}
         >
-          <source src="https://cdn.pixabay.com/video/2022/12/14/143008-780499660_large.mp4" type="video/mp4" />
+          <source
+            src="https://cdn.pixabay.com/video/2022/12/14/143008-780499660_large.mp4"
+            type="video/mp4"
+          />
         </video>
         <img
           src={heroImg}
@@ -107,18 +138,27 @@ function Hero() {
             Professional Cleaning & Fumigation
           </div>
           <h1 className="display-h text-white text-[54px] leading-[0.98] md:text-[88px] tracking-tight">
-            We Clean<br />
-            Deep. We Clean<br />
+            We Clean
+            <br />
+            Deep. We Clean
+            <br />
             <span className="text-sky-brand">Right.</span>
           </h1>
           <p className="mt-8 text-white/80 text-base md:text-[17px] leading-relaxed max-w-xl">
-            Asmato delivers industrial-grade cleaning and fumigation services for homes, offices, and businesses across Ogbomoso — spotlessly clean, every single time.
+            Asmato delivers industrial-grade cleaning and fumigation services for homes, offices,
+            and businesses across Ogbomoso — spotlessly clean, every single time.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
-            <Link to="/book" className="bg-sky-brand hover:bg-sky-dark text-white font-semibold px-8 py-4 uppercase tracking-wider text-sm inline-flex items-center gap-2 justify-center">
+            <Link
+              to="/book"
+              className="bg-sky-brand hover:bg-sky-dark text-white font-semibold px-8 py-4 uppercase tracking-wider text-sm inline-flex items-center gap-2 justify-center"
+            >
               Book a Service <ArrowRight size={18} />
             </Link>
-            <Link to="/services" className="border-2 border-white/60 hover:border-sky-brand hover:text-sky-brand text-white font-semibold px-8 py-4 uppercase tracking-wider text-sm inline-flex items-center justify-center">
+            <Link
+              to="/services"
+              className="border-2 border-white/60 hover:border-sky-brand hover:text-sky-brand text-white font-semibold px-8 py-4 uppercase tracking-wider text-sm inline-flex items-center justify-center"
+            >
               See Our Services
             </Link>
           </div>
@@ -159,7 +199,7 @@ function Stats() {
   const stats = [
     { icon: "🏢", n: 500, s: "+", label: "Clients Served" },
     { icon: "📅", n: 8, s: "+", label: "Years Experience" },
-    { icon: "👷", n: 30, s: "+", label: "Trained Cleaners" },
+    { icon: "👷", n: 12, s: "+", label: "Trained Cleaners" },
     { icon: "✅", n: 100, s: "%", label: "Satisfaction Rate" },
   ];
   return (
@@ -199,17 +239,26 @@ function WhatWeDo() {
         >
           <div className="label-caps text-sky-brand mb-4">Our Core Business</div>
           <h2 className="display-h text-deep-blue text-4xl md:text-5xl">
-            Ogbomoso's Most Trusted<br />Cleaning Professionals
+            Ogbomoso's Most Trusted
+            <br />
+            Cleaning Professionals
           </h2>
           <p className="mt-6 text-steel leading-relaxed">
-            Asmato Laundry and Cleaning Services delivers thorough, reliable, and professionally executed cleaning and fumigation solutions. From residential homes to large industrial facilities — we bring expert hands, professional equipment, and a commitment to perfection to every job.
+            Asmato Laundry and Cleaning Services delivers thorough, reliable, and professionally
+            executed cleaning and fumigation solutions. From residential homes to large industrial
+            facilities — we bring expert hands, professional equipment, and a commitment to
+            perfection to every job.
           </p>
           <blockquote className="mt-8 border-l-4 border-sky-brand bg-white p-6 shadow-lg">
             <p className="italic text-deep-blue text-lg leading-relaxed">
-              "We don't just clean surfaces. We sanitize environments and protect the people inside them."
+              "We don't just clean surfaces. We sanitize environments and protect the people inside
+              them."
             </p>
           </blockquote>
-          <Link to="/services" className="mt-8 inline-flex items-center gap-2 text-sky-brand font-semibold hover:text-sky-dark">
+          <Link
+            to="/services"
+            className="mt-8 inline-flex items-center gap-2 text-sky-brand font-semibold hover:text-sky-dark"
+          >
             See Our Services <ArrowRight size={18} />
           </Link>
         </motion.div>
@@ -221,13 +270,20 @@ function WhatWeDo() {
           transition={{ duration: 0.6 }}
           className="relative"
         >
-          <img src={teamImg} alt="Asmato professional cleaning team" className="w-full h-[520px] object-cover shadow-2xl" loading="lazy" />
+          <img
+            src={teamImg}
+            alt="Asmato professional cleaning team"
+            className="w-full h-[520px] object-cover shadow-2xl"
+            loading="lazy"
+          />
           <div className="absolute -top-4 -right-4 bg-sky-brand text-white px-5 py-3 font-display uppercase text-sm tracking-wider shadow-xl">
             Licensed & Certified ✅
           </div>
           <div className="absolute -bottom-6 -left-6 bg-white shadow-2xl p-5 flex items-center gap-3">
             <div className="flex text-sky-brand">
-              {[0,1,2,3,4].map(i => <Star key={i} size={18} fill="currentColor" />)}
+              {[0, 1, 2, 3, 4].map((i) => (
+                <Star key={i} size={18} fill="currentColor" />
+              ))}
             </div>
             <div>
               <div className="font-display text-deep-blue text-2xl leading-none">4.9/5</div>
@@ -248,10 +304,13 @@ function ServicesSection() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="label-caps text-sky-brand">Our Services</div>
           <h2 className="display-h text-white text-4xl md:text-5xl mt-3">
-            Everything Clean.<br />Everything Protected.
+            Everything Clean.
+            <br />
+            Everything Protected.
           </h2>
           <p className="text-white/70 mt-5">
-            Six specialized services — each delivered with trained professionals, proper equipment, and guaranteed results.
+            Six specialized services — each delivered with trained professionals, proper equipment,
+            and guaranteed results.
           </p>
         </div>
 
@@ -269,8 +328,11 @@ function ServicesSection() {
               <h3 className="display-h text-white text-xl uppercase">{s.name}</h3>
               <p className="text-white/60 text-sm mt-3 leading-relaxed">{s.short}</p>
               <div className="flex flex-wrap gap-2 mt-5">
-                {s.badges.map(b => (
-                  <span key={b} className="text-xs bg-sky-brand/15 text-sky-brand px-2.5 py-1 border border-sky-brand/30">
+                {s.badges.map((b) => (
+                  <span
+                    key={b}
+                    className="text-xs bg-sky-brand/15 text-sky-brand px-2.5 py-1 border border-sky-brand/30"
+                  >
                     {b}
                   </span>
                 ))}
@@ -292,10 +354,26 @@ function ServicesSection() {
 /* ---------- HOW IT WORKS ---------- */
 function HowItWorks() {
   const steps = [
-    { icon: "📞", title: "Book Your Service", body: "Call, WhatsApp, or fill our booking form — tell us what you need and when." },
-    { icon: "📋", title: "We Assess & Quote", body: "Our team assesses your space and gives you a transparent, no-hidden-fee quote." },
-    { icon: "🧹", title: "We Show Up & Clean", body: "Trained professionals arrive on time with all equipment — fully uniformed." },
-    { icon: "✅", title: "Inspection & Handover", body: "We do a final walkthrough with you — not done until you're satisfied." },
+    {
+      icon: "📞",
+      title: "Book Your Service",
+      body: "Call, WhatsApp, or fill our booking form — tell us what you need and when.",
+    },
+    {
+      icon: "📋",
+      title: "We Assess & Quote",
+      body: "Our team assesses your space and gives you a transparent, no-hidden-fee quote.",
+    },
+    {
+      icon: "🧹",
+      title: "We Show Up & Clean",
+      body: "Trained professionals arrive on time with all equipment — fully uniformed.",
+    },
+    {
+      icon: "✅",
+      title: "Inspection & Handover",
+      body: "We do a final walkthrough with you — not done until you're satisfied.",
+    },
   ];
   return (
     <section className="bg-white py-24 md:py-32">
@@ -303,7 +381,8 @@ function HowItWorks() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="label-caps text-sky-brand">Our Process</div>
           <h2 className="display-h text-deep-blue text-4xl md:text-5xl mt-3">
-            From Booking to Spotless —<br />We Handle Everything
+            From Booking to Spotless —<br />
+            We Handle Everything
           </h2>
         </div>
 
@@ -337,12 +416,36 @@ function HowItWorks() {
 /* ---------- WHY CHOOSE ---------- */
 function WhyChoose() {
   const benefits = [
-    { icon: <Shield size={26} />, title: "Certified Professionals", body: "All our cleaners are trained, vetted, and uniformed — professionals you can trust in your home or office." },
-    { icon: "🪲", title: "Licensed Fumigation", body: "Our fumigation team is licensed and uses only approved, safe chemicals — effective without endangering your family." },
-    { icon: <Clock size={26} />, title: "Always On Time", body: "We respect your schedule. Our teams arrive as booked — no delays, no excuses." },
-    { icon: <Leaf size={26} />, title: "Eco-Friendly Products", body: "We use cleaning agents that are tough on dirt but safe for children, pets, and the environment." },
-    { icon: <Phone size={26} />, title: "24/7 Availability", body: "Emergency cleaning needed? We're available around the clock — call or WhatsApp anytime." },
-    { icon: <DollarSign size={26} />, title: "Transparent Pricing", body: "No hidden charges. You get a full quote before we start — what we quote is what you pay." },
+    {
+      icon: <Shield size={26} />,
+      title: "Certified Professionals",
+      body: "All our cleaners are trained, vetted, and uniformed — professionals you can trust in your home or office.",
+    },
+    {
+      icon: "🪲",
+      title: "Licensed Fumigation",
+      body: "Our fumigation team is licensed and uses only approved, safe chemicals — effective without endangering your family.",
+    },
+    {
+      icon: <Clock size={26} />,
+      title: "Always On Time",
+      body: "We respect your schedule. Our teams arrive as booked — no delays, no excuses.",
+    },
+    {
+      icon: <Leaf size={26} />,
+      title: "Eco-Friendly Products",
+      body: "We use cleaning agents that are tough on dirt but safe for children, pets, and the environment.",
+    },
+    {
+      icon: <Phone size={26} />,
+      title: "24/7 Availability",
+      body: "Emergency cleaning needed? We're available around the clock — call or WhatsApp anytime.",
+    },
+    {
+      icon: <DollarSign size={26} />,
+      title: "Transparent Pricing",
+      body: "No hidden charges. You get a full quote before we start — what we quote is what you pay.",
+    },
   ];
   return (
     <section className="relative bg-sky-brand py-24 md:py-32 overflow-hidden">
@@ -351,7 +454,9 @@ function WhyChoose() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="label-caps text-white">Why Choose Us</div>
           <h2 className="display-h text-white text-4xl md:text-5xl mt-3">
-            Built for Cleanliness.<br />Trusted by Ogbomoso.
+            Built for Cleanliness.
+            <br />
+            Trusted by Ogbomoso.
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -387,7 +492,9 @@ function Gallery() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="label-caps text-sky-brand">Our Work</div>
-          <h2 className="display-h text-deep-blue text-4xl md:text-5xl mt-3">See the Asmato Difference</h2>
+          <h2 className="display-h text-deep-blue text-4xl md:text-5xl mt-3">
+            See the Asmato Difference
+          </h2>
           <p className="text-steel mt-4">Drag the handle. See what a proper clean looks like.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -417,7 +524,10 @@ function Gallery() {
           <p className="text-deep-blue font-display text-xl md:text-2xl uppercase">
             Every job looks like this when we're done.
           </p>
-          <Link to="/book" className="mt-6 inline-flex bg-sky-brand hover:bg-sky-dark text-white px-8 py-4 uppercase font-semibold tracking-wider text-sm">
+          <Link
+            to="/book"
+            className="mt-6 inline-flex bg-sky-brand hover:bg-sky-dark text-white px-8 py-4 uppercase font-semibold tracking-wider text-sm"
+          >
             Book Your Cleaning Today
           </Link>
         </div>
@@ -430,17 +540,20 @@ function Gallery() {
 function Testimonials() {
   const items = [
     {
-      quote: "Asmato fumigated our entire warehouse and the results were incredible. Not a single pest since. Very professional team.",
+      quote:
+        "Asmato fumigated our entire warehouse and the results were incredible. Not a single pest since. Very professional team.",
       name: "Mr. Adebayo T.",
       role: "Warehouse Owner, Ogbomoso",
     },
     {
-      quote: "I called them for deep home cleaning before my daughter's naming ceremony. My house has never looked this good. Highly recommended!",
+      quote:
+        "I called them for deep home cleaning before my daughter's naming ceremony. My house has never looked this good. Highly recommended!",
       name: "Mrs. Folake O.",
       role: "Domestic Client, Ogbomoso",
     },
     {
-      quote: "Their upholstery cleaning is top-notch. They removed stains I thought were permanent. Will definitely use again.",
+      quote:
+        "Their upholstery cleaning is top-notch. They removed stains I thought were permanent. Will definitely use again.",
       name: "Pastor Emmanuel A.",
       role: "Church Admin, Ogbomoso",
     },
@@ -450,7 +563,9 @@ function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="label-caps text-sky-brand">Client Testimonials</div>
-          <h2 className="display-h text-white text-4xl md:text-5xl mt-3">What Our Clients Say About Us</h2>
+          <h2 className="display-h text-white text-4xl md:text-5xl mt-3">
+            What Our Clients Say About Us
+          </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
           {items.map((t, i) => (
@@ -462,10 +577,14 @@ function Testimonials() {
               transition={{ delay: i * 0.15 }}
               className="bg-[#0D3251] border-l-4 border-sky-brand p-8 relative"
             >
-              <span className="absolute top-4 right-6 text-sky-brand/40 font-display text-7xl leading-none">"</span>
+              <span className="absolute top-4 right-6 text-sky-brand/40 font-display text-7xl leading-none">
+                "
+              </span>
               <p className="text-white/90 italic text-[15px] leading-[1.7] relative">{t.quote}</p>
               <div className="flex text-sky-brand mt-6 mb-3">
-                {[0,1,2,3,4].map(i2 => <Star key={i2} size={14} fill="currentColor" />)}
+                {[0, 1, 2, 3, 4].map((i2) => (
+                  <Star key={i2} size={14} fill="currentColor" />
+                ))}
               </div>
               <div className="text-white font-semibold">{t.name}</div>
               <div className="text-sky-brand text-xs">{t.role}</div>
@@ -479,14 +598,23 @@ function Testimonials() {
 
 /* ---------- COVERAGE ---------- */
 function Coverage() {
-  const areas = ["Ogbomoso North", "Ogbomoso South", "Surulere LGA", "Ogo-Oluwa", "Orire LGA", "Surrounding Areas"];
+  const areas = [
+    "Ogbomoso North",
+    "Ogbomoso South",
+    "Surulere LGA",
+    "Ogo-Oluwa",
+    "Orire LGA",
+    "Surrounding Areas",
+  ];
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="label-caps text-sky-brand">Where We Operate</div>
           <h2 className="display-h text-deep-blue text-4xl md:text-5xl mt-3">
-            Based in Ogbomoso.<br />Serving the Whole Region.
+            Based in Ogbomoso.
+            <br />
+            Serving the Whole Region.
           </h2>
         </div>
         <div className="border-4 border-sky-brand shadow-2xl overflow-hidden">
@@ -498,15 +626,23 @@ function Coverage() {
           />
         </div>
         <div className="flex flex-wrap justify-center gap-3 mt-10">
-          {areas.map(a => (
-            <span key={a} className="bg-off-white border border-brand-border text-deep-blue px-4 py-2 text-sm font-medium">
+          {areas.map((a) => (
+            <span
+              key={a}
+              className="bg-off-white border border-brand-border text-deep-blue px-4 py-2 text-sm font-medium"
+            >
               {a}
             </span>
           ))}
         </div>
         <p className="text-center text-steel mt-6">
           Not sure if we cover your area?{" "}
-          <a href={whatsappUrl("Hi Asmato, do you cover my area?")} className="text-sky-brand font-semibold hover:underline">WhatsApp us to confirm 💬</a>
+          <a
+            href={whatsappUrl("Hi Asmato, do you cover my area?")}
+            className="text-sky-brand font-semibold hover:underline"
+          >
+            WhatsApp us to confirm 💬
+          </a>
         </p>
       </div>
     </section>
@@ -517,29 +653,50 @@ function Coverage() {
 function FinalCTA() {
   return (
     <section className="relative bg-deep-blue overflow-hidden">
-      <div className="absolute inset-0 opacity-30" style={{
-        background: "repeating-linear-gradient(135deg, transparent 0 40px, rgba(14,165,233,0.15) 40px 80px)"
-      }} />
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background:
+            "repeating-linear-gradient(135deg, transparent 0 40px, rgba(14,165,233,0.15) 40px 80px)",
+        }}
+      />
       <div className="absolute top-0 left-0 right-0 h-2 bg-sky-brand" />
       <div className="relative max-w-5xl mx-auto px-4 py-24 md:py-32 text-center">
         <h2 className="display-h text-white text-4xl md:text-6xl">
-          Ready for a Spotlessly<br />Clean Space?
+          Ready for a Spotlessly
+          <br />
+          Clean Space?
         </h2>
         <p className="text-white/70 mt-6 max-w-xl mx-auto">
           Book your service today and experience the Asmato difference. Serving Ogbomoso and beyond.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-          <Link to="/book" className="bg-sky-brand hover:bg-sky-dark text-white font-semibold px-8 py-4 uppercase tracking-wider text-sm">
+          <Link
+            to="/book"
+            className="bg-sky-brand hover:bg-sky-dark text-white font-semibold px-8 py-4 uppercase tracking-wider text-sm"
+          >
             Book a Service
           </Link>
-          <a href={SITE.phoneHref} className="border-2 border-white/60 hover:border-sky-brand hover:text-sky-brand text-white font-semibold px-8 py-4 uppercase tracking-wider text-sm">
+          <a
+            href={SITE.phoneHref}
+            className="border-2 border-white/60 hover:border-sky-brand hover:text-sky-brand text-white font-semibold px-8 py-4 uppercase tracking-wider text-sm"
+          >
             Call Us Now
           </a>
         </div>
         <div className="mt-8 flex justify-center gap-6 text-white/70 text-sm">
-          <a href={SITE.phoneHref} className="flex items-center gap-2 hover:text-sky-brand"><Phone size={16}/> Call</a>
-          <a href={whatsappUrl("Hello Asmato!")} className="flex items-center gap-2 hover:text-sky-brand"><MessageCircle size={16}/> WhatsApp</a>
-          <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 hover:text-sky-brand"><Mail size={16}/> Email</a>
+          <a href={SITE.phoneHref} className="flex items-center gap-2 hover:text-sky-brand">
+            <Phone size={16} /> Call
+          </a>
+          <a
+            href={whatsappUrl("Hello Asmato!")}
+            className="flex items-center gap-2 hover:text-sky-brand"
+          >
+            <MessageCircle size={16} /> WhatsApp
+          </a>
+          <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 hover:text-sky-brand">
+            <Mail size={16} /> Email
+          </a>
         </div>
       </div>
     </section>
@@ -547,4 +704,6 @@ function FinalCTA() {
 }
 
 // unused import guard
-void CheckCircle2; void SparkleIcon; void IMG;
+void CheckCircle2;
+void SparkleIcon;
+void IMG;

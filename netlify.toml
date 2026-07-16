@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = ".output/server"
+
+[functions]
+  directory = ".output/server"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 3000
+
+# SPA history fallback so deep links / navigation never 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
