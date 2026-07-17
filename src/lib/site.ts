@@ -5,10 +5,10 @@ export const SITE = {
   phone: "+234 703 643 6146",
   phoneHref: "tel:+2347036436146",
   whatsappNumber: "2347036436146",
-  email: "hello@asmatocleaning.com",
+  email: "asmatocleaningservices@gmail.com",
   address: "Ogbomoso, Oyo State, Nigeria",
   hoursWeek: "Mon–Sat: 7:00 AM – 7:00 PM",
-  hoursSun: "Sunday: 9:00 AM – 5:00 PM  •  Emergency 24/7",
+  hoursSun: "",
 };
 
 export const whatsappUrl = (message: string) =>

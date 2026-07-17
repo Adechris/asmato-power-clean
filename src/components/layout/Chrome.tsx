@@ -181,7 +181,7 @@ export function Footer() {
               <li className="flex gap-2"><MapPin size={16} className="text-sky-brand shrink-0" /> {SITE.address}</li>
               <li><a href={SITE.phoneHref} className="flex gap-2 hover:text-sky-brand"><Phone size={16} className="text-sky-brand shrink-0" /> {SITE.phone}</a></li>
               <li><a href={`mailto:${SITE.email}`} className="flex gap-2 hover:text-sky-brand"><Mail size={16} className="text-sky-brand shrink-0" /> {SITE.email}</a></li>
-              <li className="flex gap-2"><Clock size={16} className="text-sky-brand shrink-0" /> <span>{SITE.hoursWeek}<br/>{SITE.hoursSun}</span></li>
+              <li className="flex gap-2"><Clock size={16} className="text-sky-brand shrink-0" /> <span>{SITE.hoursWeek}</span></li>
             </ul>
             <a
               href={whatsappUrl("Hello Asmato!")}
