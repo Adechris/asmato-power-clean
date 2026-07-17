@@ -138,11 +138,11 @@ function Hero() {
             Professional Cleaning & Fumigation
           </div>
           <h1 className="display-h text-white text-[54px] leading-[0.98] md:text-[88px] tracking-tight">
-            We Clean
+           Committed To  
             <br />
-            Deep. We Clean
+            Your Health
             <br />
-            <span className="text-sky-brand">Right.</span>
+            <span className="text-sky-brand">And The Environment .</span>
           </h1>
           <p className="mt-8 text-white/80 text-base md:text-[17px] leading-relaxed max-w-xl">
             Asmato delivers industrial-grade cleaning and fumigation services for homes, offices,

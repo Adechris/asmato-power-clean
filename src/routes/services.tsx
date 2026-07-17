@@ -101,7 +101,7 @@ function Services() {
 
                     {s.slug === "fumigation" && (
                       <div className="mt-6 bg-sky-brand/10 border-l-4 border-sky-brand p-5 text-deep-blue text-sm">
-                        <strong>Safety note:</strong> All our fumigation chemicals are approved and safe for use around children and pets after the recommended 4–6 hour re-entry period.
+                        <strong>Safety note:</strong> All our fumigation chemicals are approved and safe for use around children and pets after the recommended 24 hours re-entry period.
                       </div>
                     )}
 

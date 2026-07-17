@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Menu, X, MapPin, Phone, MessageCircle, Facebook, Instagram, Mail, Clock } from "lucide-react";
 import { SITE, whatsappUrl } from "@/lib/site";
+import logo from "@/assets/logo.jpeg";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -55,13 +56,12 @@ export function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
-          <Link to="/" className="flex flex-col leading-none">
-            <span className="text-white font-display font-bold text-2xl md:text-3xl tracking-tight">
-              {SITE.shortName}
-            </span>
-            <span className="text-sky-brand text-[10px] md:text-xs uppercase tracking-[0.2em] mt-0.5">
-              {SITE.tagline}
-            </span>
+          <Link to="/" className="flex items-center leading-none">
+            <img
+              src={logo}
+              alt={SITE.name}
+              className="h-16 md:h-20 w-auto object-contain"
+            />
           </Link>
           <div className="hidden lg:flex items-center gap-8">
             {NAV.map((n) => (
@@ -132,10 +132,11 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <div className="font-display font-bold text-3xl">{SITE.shortName}</div>
-            <div className="text-sky-brand text-xs uppercase tracking-[0.2em] mt-1">
-              {SITE.tagline}
-            </div>
+            <img
+              src={logo}
+              alt={SITE.name}
+              className="h-24 md:h-28 w-auto object-contain"
+            />
             <p className="text-white/70 mt-6 text-sm italic leading-relaxed">
               Clean Spaces. Safe Environments. Happy Clients.
             </p>
