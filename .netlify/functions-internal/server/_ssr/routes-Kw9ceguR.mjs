@@ -2,12 +2,12 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { a as Play, c as MessageCircle, d as Mail, f as Leaf, g as Clock, h as DollarSign, i as Shield, o as Phone, r as Star, s as Pause, v as ArrowRight } from "../_libs/lucide-react.mjs";
-import { a as whatsappUrl, i as Sparkles, n as SERVICES, r as SITE, t as PageShell } from "./Chrome-io84Y1Vo.mjs";
+import { a as whatsappUrl, i as Sparkles, n as SERVICES, r as SITE, t as PageShell } from "./Chrome-MLMWrdt2.mjs";
 import { t as team_default } from "./team-BZTFgXNw.mjs";
 import { a as motion, i as useMotionValue, n as animate, r as useTransform, t as useInView } from "../_libs/framer-motion.mjs";
 import { t as hero_cleaner_default } from "./hero-cleaner-B992rBzi.mjs";
 import { n as g, t as p } from "../_libs/react-compare-slider.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BqqxRT75.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-Kw9ceguR.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var before_carpet_default = "/assets/before-carpet-IM4-D9M8.jpg";
@@ -98,13 +98,13 @@ function Hero() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 							className: "display-h text-white text-[54px] leading-[0.98] md:text-[88px] tracking-tight",
 							children: [
-								"We Clean",
+								"Committed To",
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
-								"Deep. We Clean",
+								"Your Health",
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									className: "text-sky-brand",
-									children: "Right."
+									children: "And The Environment ."
 								})
 							]
 						}),

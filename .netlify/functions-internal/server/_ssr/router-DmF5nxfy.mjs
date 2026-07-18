@@ -1,9 +1,9 @@
 import { n as require_jsx_runtime, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-Bnm1MpQ5.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-DmF5nxfy.js
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-BR0qDLnF.css";
+var styles_default = "/assets/styles-DGES9yBv.css";
 function NotFoundComponent() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "flex min-h-screen items-center justify-center bg-deep-blue px-4",
@@ -146,7 +146,7 @@ function RootComponent() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 	});
 }
-var $$splitComponentImporter$4 = () => import("./services-V1Ac8VwB.mjs");
+var $$splitComponentImporter$4 = () => import("./services-CQdxhlPp.mjs");
 var Route$4 = createFileRoute("/services")({
 	head: () => ({ meta: [{ title: "Our Services — Asmato Cleaning & Fumigation" }, {
 		name: "description",
@@ -154,7 +154,7 @@ var Route$4 = createFileRoute("/services")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-var $$splitComponentImporter$3 = () => import("./contact-BQLDZrPa.mjs");
+var $$splitComponentImporter$3 = () => import("./contact-CDQwMK2S.mjs");
 var Route$3 = createFileRoute("/contact")({
 	head: () => ({ meta: [{ title: "Contact Asmato — Cleaning & Fumigation in Ogbomoso" }, {
 		name: "description",
@@ -162,7 +162,7 @@ var Route$3 = createFileRoute("/contact")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./book-kKdOj9R6.mjs");
+var $$splitComponentImporter$2 = () => import("./book-B2tF7yRu.mjs");
 var Route$2 = createFileRoute("/book")({
 	head: () => ({ meta: [{ title: "Book a Service — Asmato Cleaning & Fumigation" }, {
 		name: "description",
@@ -170,7 +170,7 @@ var Route$2 = createFileRoute("/book")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./about-C-xdbJMU.mjs");
+var $$splitComponentImporter$1 = () => import("./about-DdX8RVWn.mjs");
 var Route$1 = createFileRoute("/about")({
 	head: () => ({ meta: [{ title: "About Asmato — Cleaning Ogbomoso, One Space at a Time" }, {
 		name: "description",
@@ -178,7 +178,7 @@ var Route$1 = createFileRoute("/about")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./routes-BqqxRT75.mjs");
+var $$splitComponentImporter = () => import("./routes-Kw9ceguR.mjs");
 var Route = createFileRoute("/")({
 	head: () => ({ meta: [{ title: "Asmato Cleaning & Fumigation — Ogbomoso, Nigeria" }, {
 		name: "description",

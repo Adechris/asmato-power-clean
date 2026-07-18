@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { c as MessageCircle, d as Mail, g as Clock, l as Menu, m as Facebook, o as Phone, p as Instagram, t as X, u as MapPin } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/Chrome-io84Y1Vo.js
+//#region node_modules/.nitro/vite/services/ssr/assets/Chrome-MLMWrdt2.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var SITE = {
@@ -12,10 +12,10 @@ var SITE = {
 	phone: "+234 703 643 6146",
 	phoneHref: "tel:+2347036436146",
 	whatsappNumber: "2347036436146",
-	email: "hello@asmatocleaning.com",
+	email: "asmatocleaningservices@gmail.com",
 	address: "Ogbomoso, Oyo State, Nigeria",
 	hoursWeek: "Mon–Sat: 7:00 AM – 7:00 PM",
-	hoursSun: "Sunday: 9:00 AM – 5:00 PM  •  Emergency 24/7"
+	hoursSun: ""
 };
 var whatsappUrl = (message) => `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(message)}`;
 var SERVICES = [
@@ -170,6 +170,7 @@ var SERVICES = [
 		image: "fumigation"
 	}
 ];
+var logo_default = "/assets/logo-CCb9T8_V.jpeg";
 var NAV = [
 	{
 		to: "/",
@@ -239,16 +240,14 @@ function Navbar() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-7xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between",
 			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 					to: "/",
-					className: "flex flex-col leading-none",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-white font-display font-bold text-2xl md:text-3xl tracking-tight",
-						children: SITE.shortName
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sky-brand text-[10px] md:text-xs uppercase tracking-[0.2em] mt-0.5",
-						children: SITE.tagline
-					})]
+					className: "flex items-center leading-none",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						src: logo_default,
+						alt: SITE.name,
+						className: "h-16 md:h-20 w-auto object-contain"
+					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "hidden lg:flex items-center gap-8",
@@ -312,13 +311,10 @@ function Footer() {
 				className: "grid md:grid-cols-4 gap-10",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "font-display font-bold text-3xl",
-							children: SITE.shortName
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "text-sky-brand text-xs uppercase tracking-[0.2em] mt-1",
-							children: SITE.tagline
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: logo_default,
+							alt: SITE.name,
+							className: "h-24 md:h-28 w-auto object-contain"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "text-white/70 mt-6 text-sm italic leading-relaxed",
@@ -416,11 +412,7 @@ function Footer() {
 											className: "text-sky-brand shrink-0"
 										}),
 										" ",
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
-											SITE.hoursWeek,
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
-											SITE.hoursSun
-										] })
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: SITE.hoursWeek })
 									]
 								})
 							]

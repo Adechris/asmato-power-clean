@@ -1,7 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { CheckCircle2, MessageCircle } from "lucide-react";
 import { PageShell } from "@/components/layout/Chrome";
 import { SITE, SERVICES, whatsappUrl } from "@/lib/site";
 
@@ -15,23 +13,43 @@ export const Route = createFileRoute("/book")({
   component: Book,
 });
 
-function genRef() {
-  const n = Math.floor(1000 + Math.random() * 9000);
-  return `ASM-2025-${n}`;
-}
-
 function Book() {
-  const [submitted, setSubmitted] = useState<{ name: string; service: string; ref: string } | null>(null);
   const [sameWa, setSameWa] = useState(true);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
-    setSubmitted({
-      name: String(fd.get("name") || "Client"),
-      service: String(fd.get("service") || "Cleaning"),
-      ref: genRef(),
-    });
+    const get = (k: string) => String(fd.get(k) || "").trim();
+
+    const name = get("name") || "Client";
+    const phone = get("phone");
+    const whatsapp = sameWa ? phone : get("whatsapp");
+    const email = get("email");
+    const service = get("service") || "Cleaning";
+    const property = get("property");
+    const date = get("date");
+    const time = get("time");
+    const address = get("address");
+    const details = get("details");
+    const referral = get("referral");
+
+    const lines = [
+      "Hello Asmato! 👋 I'd like to book a cleaning / fumigation service.",
+      "",
+      `📝 *Name:* ${name}`,
+      phone && `📞 *Phone:* ${phone}`,
+      whatsapp && `💬 *WhatsApp:* ${whatsapp}`,
+      email && `✉️ *Email:* ${email}`,
+      `🧹 *Service:* ${service}`,
+      property && `🏠 *Property:* ${property}`,
+      date && `📅 *Preferred Date:* ${date}`,
+      time && `⏰ *Time Slot:* ${time}`,
+      address && `📍 *Address:* ${address}`,
+      details && `📝 *Details:* ${details}`,
+      referral && `🔎 *Heard from:* ${referral}`,
+    ].filter(Boolean) as string[];
+
+    window.open(whatsappUrl(lines.join("\n")), "_blank", "noreferrer");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -48,41 +66,7 @@ function Book() {
 
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4">
-          {submitted ? (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
-              className="bg-white shadow-2xl border-t-4 border-sky-brand p-8 md:p-12 text-center"
-            >
-              <motion.div
-                initial={{ scale: 0 }} animate={{ scale: 1 }}
-                transition={{ type: "spring", delay: 0.1 }}
-                className="mx-auto w-20 h-20 rounded-full bg-sky-brand flex items-center justify-center"
-              >
-                <CheckCircle2 size={44} className="text-white" />
-              </motion.div>
-              <h2 className="display-h text-deep-blue text-3xl md:text-4xl mt-6">Booking Received! 🎉</h2>
-              <p className="text-steel mt-4">
-                Thank you <strong>{submitted.name}</strong>! Your booking request for <strong>{submitted.service}</strong> has been received. Our team will call or WhatsApp you within 2 hours to confirm.
-              </p>
-              <div className="mt-6 inline-block bg-off-white border border-brand-border px-6 py-3">
-                <div className="label-caps text-sky-brand text-xs">Booking Reference</div>
-                <div className="display-h text-deep-blue text-2xl mt-1">{submitted.ref}</div>
-              </div>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-                <a
-                  href={whatsappUrl(`Hello Asmato! I just submitted a booking (Ref: ${submitted.ref}) for ${submitted.service}. Please confirm.`)}
-                  target="_blank" rel="noreferrer"
-                  className="bg-[#25D366] hover:opacity-90 text-white font-semibold px-6 py-3 inline-flex items-center justify-center gap-2"
-                >
-                  <MessageCircle size={18}/> Send on WhatsApp
-                </a>
-                <Link to="/" className="border-2 border-deep-blue text-deep-blue px-6 py-3 font-semibold uppercase tracking-wide text-sm">
-                  Back to Home
-                </Link>
-              </div>
-            </motion.div>
-          ) : (
-            <form onSubmit={onSubmit} className="bg-white shadow-2xl border-t-4 border-sky-brand p-6 md:p-10 space-y-5">
+          <form onSubmit={onSubmit} className="bg-white shadow-2xl border-t-4 border-sky-brand p-6 md:p-10 space-y-5">
               <div className="grid md:grid-cols-2 gap-5">
                 <Field label="Full Name" name="name" required />
                 <Field label="Phone Number" name="phone" type="tel" required />
@@ -117,7 +101,6 @@ function Book() {
                 Prefer to talk? Call <a className="text-sky-brand font-semibold" href={SITE.phoneHref}>{SITE.phone}</a> or WhatsApp us.
               </p>
             </form>
-          )}
         </div>
       </section>
     </PageShell>

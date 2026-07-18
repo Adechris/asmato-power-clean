@@ -1,26 +1,42 @@
 import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { _ as CircleCheck, c as MessageCircle } from "../_libs/lucide-react.mjs";
-import { a as whatsappUrl, n as SERVICES, r as SITE, t as PageShell } from "./Chrome-io84Y1Vo.mjs";
-import { a as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/book-kKdOj9R6.js
+import { a as whatsappUrl, n as SERVICES, r as SITE, t as PageShell } from "./Chrome-MLMWrdt2.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/book-B2tF7yRu.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-function genRef() {
-	return `ASM-2025-${Math.floor(1e3 + Math.random() * 9e3)}`;
-}
 function Book() {
-	const [submitted, setSubmitted] = (0, import_react.useState)(null);
 	const [sameWa, setSameWa] = (0, import_react.useState)(true);
 	const onSubmit = (e) => {
 		e.preventDefault();
 		const fd = new FormData(e.currentTarget);
-		setSubmitted({
-			name: String(fd.get("name") || "Client"),
-			service: String(fd.get("service") || "Cleaning"),
-			ref: genRef()
-		});
+		const get = (k) => String(fd.get(k) || "").trim();
+		const name = get("name") || "Client";
+		const phone = get("phone");
+		const whatsapp = sameWa ? phone : get("whatsapp");
+		const email = get("email");
+		const service = get("service") || "Cleaning";
+		const property = get("property");
+		const date = get("date");
+		const time = get("time");
+		const address = get("address");
+		const details = get("details");
+		const referral = get("referral");
+		const lines = [
+			"Hello Asmato! 👋 I'd like to book a cleaning / fumigation service.",
+			"",
+			`📝 *Name:* ${name}`,
+			phone && `📞 *Phone:* ${phone}`,
+			whatsapp && `💬 *WhatsApp:* ${whatsapp}`,
+			email && `✉️ *Email:* ${email}`,
+			`🧹 *Service:* ${service}`,
+			property && `🏠 *Property:* ${property}`,
+			date && `📅 *Preferred Date:* ${date}`,
+			time && `⏰ *Time Slot:* ${time}`,
+			address && `📍 *Address:* ${address}`,
+			details && `📝 *Details:* ${details}`,
+			referral && `🔎 *Heard from:* ${referral}`
+		].filter(Boolean);
+		window.open(whatsappUrl(lines.join("\n")), "_blank", "noreferrer");
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth"
@@ -42,70 +58,7 @@ function Book() {
 		className: "bg-off-white py-16 md:py-24",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "max-w-3xl mx-auto px-4",
-			children: submitted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
-				initial: {
-					opacity: 0,
-					scale: .95
-				},
-				animate: {
-					opacity: 1,
-					scale: 1
-				},
-				className: "bg-white shadow-2xl border-t-4 border-sky-brand p-8 md:p-12 text-center",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-						initial: { scale: 0 },
-						animate: { scale: 1 },
-						transition: {
-							type: "spring",
-							delay: .1
-						},
-						className: "mx-auto w-20 h-20 rounded-full bg-sky-brand flex items-center justify-center",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, {
-							size: 44,
-							className: "text-white"
-						})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "display-h text-deep-blue text-3xl md:text-4xl mt-6",
-						children: "Booking Received! 🎉"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-						className: "text-steel mt-4",
-						children: [
-							"Thank you ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: submitted.name }),
-							"! Your booking request for ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: submitted.service }),
-							" has been received. Our team will call or WhatsApp you within 2 hours to confirm."
-						]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mt-6 inline-block bg-off-white border border-brand-border px-6 py-3",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "label-caps text-sky-brand text-xs",
-							children: "Booking Reference"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "display-h text-deep-blue text-2xl mt-1",
-							children: submitted.ref
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mt-8 flex flex-col sm:flex-row gap-3 justify-center",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-							href: whatsappUrl(`Hello Asmato! I just submitted a booking (Ref: ${submitted.ref}) for ${submitted.service}. Please confirm.`),
-							target: "_blank",
-							rel: "noreferrer",
-							className: "bg-[#25D366] hover:opacity-90 text-white font-semibold px-6 py-3 inline-flex items-center justify-center gap-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageCircle, { size: 18 }), " Send on WhatsApp"]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							to: "/",
-							className: "border-2 border-deep-blue text-deep-blue px-6 py-3 font-semibold uppercase tracking-wide text-sm",
-							children: "Back to Home"
-						})]
-					})
-				]
-			}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 				onSubmit,
 				className: "bg-white shadow-2xl border-t-4 border-sky-brand p-6 md:p-10 space-y-5",
 				children: [

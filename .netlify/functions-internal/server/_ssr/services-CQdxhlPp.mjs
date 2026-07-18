@@ -1,10 +1,10 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { _ as CircleCheck } from "../_libs/lucide-react.mjs";
-import { n as SERVICES, t as PageShell } from "./Chrome-io84Y1Vo.mjs";
+import { n as SERVICES, t as PageShell } from "./Chrome-MLMWrdt2.mjs";
 import { a as motion } from "../_libs/framer-motion.mjs";
 import { t as hero_cleaner_default } from "./hero-cleaner-B992rBzi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/services-V1Ac8VwB.js
+//#region node_modules/.nitro/vite/services/ssr/assets/services-CQdxhlPp.js
 var import_jsx_runtime = require_jsx_runtime();
 var IMG = {
 	commercial: "/assets/commercial-BFjaLsme.jpg",
@@ -140,7 +140,7 @@ function Services() {
 								}),
 								s.slug === "fumigation" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "mt-6 bg-sky-brand/10 border-l-4 border-sky-brand p-5 text-deep-blue text-sm",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Safety note:" }), " All our fumigation chemicals are approved and safe for use around children and pets after the recommended 4–6 hour re-entry period."]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Safety note:" }), " All our fumigation chemicals are approved and safe for use around children and pets after the recommended 24 hours re-entry period."]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 									to: "/book",
